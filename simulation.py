@@ -10,6 +10,7 @@
 import math
 from vector3class import *
 
+# THIS FILE IS A LITTLE DIFFERENT THAN THE NOTEBOOK BECAUSE IT IS ALSO USED FOR TESTING.
 # "___SOMETHING SOMETHING___" is header comments.
 
 
@@ -191,7 +192,7 @@ neptune = Body(position=Vector3(0,4444.45e+9),
                mass=102.413e+24,
                name="neptune")
 
-solarSystem = [sun, mercury, venus, earth, mars, jupiter, saturn, uranus, neptune]
+solarSystem = [sun, mercury, venus, earth]
 
 # 1 earth circular orbit = 365 days in this simulation (365 iterations)
 # 1 mars circular orbit = 669 days in this simulation
