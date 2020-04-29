@@ -174,8 +174,24 @@ mars = Body(position=Vector3(0,206.7e+9),
             velocity=Vector3(-26500,0),
             mass=6.39e+23,
             name="mars")
+jupiter = Body(position=Vector3(0,740.52e+9),
+               velocity=Vector3(-13720, 0),
+               mass=1898.19e+24,
+               name="jupiter")
+saturn = Body(position=Vector3(0,1352e+9),
+              velocity=Vector3(-10180, 0),
+              mass=568.34e+24,
+              name="saturn")
+uranus = Body(position=Vector3(0, 2741.30e+9),
+              velocity=Vector3(-7.11e+3, 0),
+              mass=86.813e+24,
+              name="uranus")
+neptune = Body(position=Vector3(0,4444.45e+9),
+               velocity=Vector3(-5.50e+3, 0),
+               mass=102.413e+24,
+               name="neptune")
 
-solarSystem = [sun, mercury, venus, earth, mars]
+solarSystem = [sun, mercury, venus, earth, mars, jupiter, saturn, uranus, neptune]
 
 # 1 earth circular orbit = 365 days in this simulation (365 iterations)
 # 1 mars circular orbit = 669 days in this simulation
@@ -193,7 +209,9 @@ particleSystem = [particle1, particle2]
 
 # __Safe-to-touch data and stuff__ #
 bodiesInSystem = solarSystem
-dataToPlot = Simulate(bodiesInSystem, 669*24, 60*60)
+iterations = 164*365
+timeStep = 60*60*24
+dataToPlot = Simulate(bodiesInSystem, iterations, timeStep)
 PlotTheData(dataToPlot, False, "z")
 
 # ___TESTING___ #
