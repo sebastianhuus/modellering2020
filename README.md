@@ -3,4 +3,4 @@
 Notebooken er litt spaghetti så hvis du faktisk 
 vil se stuff må du nok laste ned hele mappa :p
 
-Notebooken er "n-body-simulation.ipynb"
+Fila du kanskje vil ta en titt på er "n-body-simulation.ipynb"
