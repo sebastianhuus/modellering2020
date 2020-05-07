@@ -192,7 +192,7 @@ neptune = Body(position=Vector3(0,4444.45e+9),
                mass=102.413e+24,
                name="neptune")
 
-solarSystem = [sun, mercury, venus, earth]
+solarSystem = [sun, earth]
 
 # 1 earth circular orbit = 365 days in this simulation (365 iterations)
 # 1 mars circular orbit = 669 days in this simulation
@@ -210,7 +210,7 @@ particleSystem = [particle1, particle2]
 
 # __Safe-to-touch data and stuff__ #
 bodiesInSystem = solarSystem
-iterations = 164*365
+iterations = 500 * 365
 timeStep = 60*60*24
 dataToPlot = Simulate(bodiesInSystem, iterations, timeStep)
 PlotTheData(dataToPlot, False, "z")
