@@ -209,9 +209,23 @@ particle2 = Body(position=Vector3(0, 6.674),
 particleSystem = [particle1, particle2]
 
 # __Safe-to-touch data and stuff__ #
+# More iterations means more time to compute.
+# Larger timeStep means less time to compute but more inaccuracy.
+# timeStep is basically just changing the time unit in our physical formulas from
+# seconds to something else (e.g. like hours or days).
+
+# E.g. if we have 100 years between each "jump" in position, it will be
+# super-duper-mega inaccurate.
+hour = 60*60
+day = 24*hour
+
+# Below is the "standard" parameters I have found out to work pretty nice.
+# We have a timestep of one hour and by changing "669", we can change the amount
+# of days we simulate. I.e. one year is 365 days, so we can simulate only one year
+# if we want.
 bodiesInSystem = solarSystem
-iterations = 500 * 365
-timeStep = 60*60*24
+iterations = 687*24
+timeStep = 60*60
 dataToPlot = Simulate(bodiesInSystem, iterations, timeStep)
 PlotTheData(dataToPlot, False, "z")
 
